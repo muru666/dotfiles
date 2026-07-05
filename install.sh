@@ -1,5 +1,8 @@
 #!/bin/bash
 
+chmod +x packages.sh
+chmod +x compile.sh
+
 ./packages.sh
 ./compile.sh
 

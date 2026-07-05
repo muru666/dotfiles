@@ -1,6 +1,7 @@
 # Carpeta de clonación. Aquí se agregarán todos los clones para luego borrarlos
 
 mkdir ClonesDotfiles
+cd ClonesDotfiles
 
 #Hace zsh default. Puede fallar :(
 chsh -s $(which zsh)
@@ -40,3 +41,6 @@ cp fonts/* ~/.local/share/fonts/
 
 fc-cache -fv
 
+# Borrar todo
+cd ..
+rm -rf ClonesDotfiles
