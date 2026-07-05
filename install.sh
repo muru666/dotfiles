@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e  
+
 echo "Instalando las dependencias"
 
 chmod +x packages.sh
@@ -10,5 +12,6 @@ chmod +x compile.sh
 
 echo "Copiando dotfiles..."
 cp -r dotfiles/* ~/.config/
+mv ~/.config/.zshrc ~/
 
-echo "Instalación finalizada. DISFRUTE!"
+echo "Instalación finalizada. "

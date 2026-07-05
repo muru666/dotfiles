@@ -4,9 +4,11 @@ mkdir ClonesDotfiles
 cd ClonesDotfiles
 
 #Hace zsh default. Puede fallar :(
-chsh -s $(which zsh)
+chsh -s "$(which zsh)" || echo "No se pudo cambiar shell automáticamente"
 
 #Instala oh-my-zsh
+export RUNZSH=no
+export CHSH=no
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Extensiones
@@ -20,7 +22,6 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-
 
 #Arma picom desde cero 
 git clone https://github.com/yshui/picom.git
-
 cd picom
 
 meson setup --buildtype=release build
@@ -31,16 +32,14 @@ sudo ninja -C build install
 
 # Fondos de pantalla y fuentes
 
-mkdir -p ~/Pictures/Wallpapers
+mkdir -p "$HOME/Pictures/Wallpapers"
+cp -r "$WORKDIR/wallpapers/"* "$HOME/Pictures/Wallpapers/" 2>/dev/null || true
 
-cp wallpapers/* ~/Pictures/Wallpapers/
-
-mkdir -p ~/.local/share/fonts
-
-cp fonts/* ~/.local/share/fonts/
+mkdir -p "$HOME/.local/share/fonts"
+cp -r "$WORKDIR/fonts/"* "$HOME/.local/share/fonts/" 2>/dev/null || true
 
 fc-cache -fv
 
 # Borrar todo
-cd ..
-rm -rf ClonesDotfiles
+cd "$HOME"
+rm -rf "$WORKDIR"
