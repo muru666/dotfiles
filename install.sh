@@ -1,9 +1,11 @@
 #!/bin/bash
 
-chmod +x packages.sh
-chmod +x compile.sh
+echo "Instalando las dependencias"
 
+chmod +x packages.sh
 ./packages.sh
+
+chmod +x compile.sh
 ./compile.sh
 
 echo "Copiando dotfiles..."
