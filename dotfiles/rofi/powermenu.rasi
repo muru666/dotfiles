@@ -1,0 +1,29 @@
+window {
+    width: 220px;
+    background-color: #121212;
+    border: 1px;
+    border-color: #444444;
+}
+
+mainbox {
+    padding: 4px;
+}
+
+listview {
+    spacing: 2px;
+    lines: 5;
+}
+
+element {
+    padding: 6px 8px;
+    text-color: #bbbbbb;
+}
+
+element selected {
+    background-color: #1e1e1e;
+    text-color: #ffffff;
+}
+
+prompt {
+    enabled: false;
+}

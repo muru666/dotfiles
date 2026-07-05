@@ -1,0 +1,4 @@
+@theme "/home/agus/.local/share/rofi/themes/launchpad.rasi"
+configuration {
+    show-icons: true;
+}

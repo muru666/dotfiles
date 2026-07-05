@@ -1,0 +1,58 @@
+#################################
+# Backend
+#################################
+
+backend = "glx";
+vsync = true;
+
+#################################
+# Sombras
+#################################
+
+shadow = true;
+shadow-radius = 12;
+shadow-offset-x = -7;
+shadow-offset-y = -7;
+shadow-opacity = 0.4;
+
+#################################
+# Esquinas redondeadas
+#################################
+
+corner-radius = 8;
+
+#################################
+# Transparencia
+#################################
+
+inactive-opacity = 0.95;
+active-opacity = 1.0;
+frame-opacity = 1.0;
+
+#################################
+# Desvanecimientos
+#################################
+
+fading = true;
+fade-in-step = 0.05;
+fade-out-step = 0.05;
+
+#################################
+# Detección de ventanas
+#################################
+
+mark-wmwin-focused = true;
+mark-ovredir-focused = true;
+use-damage = true;
+
+#################################
+# Evitar sombras en docks
+#################################
+
+wintypes:
+{
+  dock = { shadow = false; };
+  dnd = { shadow = false; };
+  popup_menu = { shadow = false; };
+  dropdown_menu = { shadow = false; };
+};
