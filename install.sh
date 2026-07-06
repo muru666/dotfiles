@@ -2,16 +2,15 @@
 
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
 echo "Instalando las dependencias"
 
-chmod +x packages.sh
-./packages.sh
-
-chmod +x compile.sh
-./compile.sh
+bash "$SCRIPT_DIR/packages.sh"
+bash "$SCRIPT_DIR/compile.sh"
 
 echo "Copiando dotfiles..."
-cp -r dotfiles/* ~/.config/
-mv ~/.config/.zshrc ~/
 
-echo "Instalación finalizada. "
+cp -r "$SCRIPT_DIR/dotfiles/." "$HOME/"
+
+echo "Instalación finalizada."
