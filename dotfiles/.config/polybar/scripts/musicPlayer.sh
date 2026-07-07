@@ -1,8 +1,11 @@
 #!/bin/bash
 
-if [[ $(playerctl status) == 'Playing' ]];
-  then
+status=$(playerctl status 2>/dev/null)
+
+if [[ -z "$status" ]]; then
+    echo '  '
+elif [[ "$status" == 'Playing' ]]; then
     echo '  '
-  else
+else
     echo '  '
 fi
