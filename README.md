@@ -37,41 +37,67 @@ https://github.com/user-attachments/assets/4a20591e-53ff-4972-af22-20c4f8bcca3c
 
 
 ## Atajos relevantes
-Todos los atajos están referenciados en sxhkdrc
+Todos los atajos están referenciados en sxhkdrc.
+Los atajos presentes son una modificación del presente en los ejemplos de sxhkd.
 
 Super = Tecla de Windows
 
-Super + D
+Super + números ->
+    Cambiar escritorio
+
+Super + shift + números ->
+    Enviar la ventana seleccionada al escritorio selecto
+
+Super + D ->
     Menú de aplicaciones
-Super + I / O
+
+Super + I / O ->
     Enforcar aplicación anterior / Siguiente
 
-Super + W
+Super + L  ->
+    Bloquear escritorio
+
+Super + Shift + L ->
+    Bloquear y suspender PC
+
+Super + "+"/"-" ->
+    Subir/bajar volumen
+
+Super + W ->
     Cerrar ventana
 
-Super + (Flechas)
+Super + (Flechas) ->
     Seleccionar terminal
 
-Super + shift + (Flechas)
+Super + shift + (Flechas) ->
     Mover ventana
 
-Super + M
+Super + M ->
     Ventana maximizada
 
-Super + T/S/F
+Super + T/S/F ->
     Modo tiling / Ventana flotante / Ventana completa
 
-Super + Control + (Flechas)
+Super + Control + (Flechas) ->
     Reducir tamaño de la ventana (Hecho para ventana flotante)
 
-Super + Alt + (Flechas)
+Super + Alt + (Flechas) ->
     Aumentar tamaño de la ventana
 
-Super + B
+Super + B ->
     Abrir Brave
 
-Super + Alt + R / Q
+Super + Shift + S
+    Sacar captura con flameshot
+
+Super + Alt + R / Q ->
     Reinicia / Cierra BSPWM 
 
-Super + Escape
+Super + Escape ->
     Actualiza los atajos (ver sxhkdrc)
+
+ 
+## Detalles adicionales
+Brave siempre se va a abrir en el escritorio 2 maximizado. Cualquier detalle puede ser modificado en aquí:
+    
+    .config/bspwm/bspwmrc

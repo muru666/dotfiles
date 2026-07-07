@@ -12,12 +12,15 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
+# Explorador de archivos flotante
 bspc rule -a Nemo state=floating
+# Brave en escritorio 2
 bspc rule -a Brave-browser desktop='^2' state=tiled
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
+# Ventanas maximizadas en el escritorio 2
 bspc desktop '^2' -l monocle
 
 picom --config ~/.config/picom/picom.conf &
