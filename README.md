@@ -38,7 +38,9 @@ https://github.com/user-attachments/assets/4a20591e-53ff-4972-af22-20c4f8bcca3c
 
 ## Atajos relevantes
 Todos los atajos están referenciados en sxhkdrc.
-Los atajos presentes son una modificación del presente en los ejemplos de sxhkd.
+Los siguientes atajos son una modificación del 'sxhkdrc' extraído del ejemplo incluido 
+
+    /usr/share/doc/bspwm/examples/sxhkdrc
 
 Super = Tecla de Windows
 
