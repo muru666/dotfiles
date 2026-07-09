@@ -48,6 +48,17 @@ ninja -C build
 
 sudo ninja -C build install
 
+# Arma dunst desde Github
+
+echo "==> Compilando Dunst"
+
+git clone https://github.com/dunst-project/dunst.git
+cd dunst
+
+make WAYLAND=0
+sudo make install WAYLAND=0
+
+
 # Fondos de pantalla y fuentes
 
 echo "==> Pasando fondos y fuentes lindas"
