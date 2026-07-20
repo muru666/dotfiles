@@ -6,13 +6,17 @@
 super + b
 	/var/lib/flatpak/exports/bin/com.brave.Browser 
 
+# Files
+super + shift + f
+	nemo
+
 # Code
-Super + c
-	code
+super + c
+	code 
 
 # terminal emulator
 super + Return
-	kitty
+	~/.local/kitty.app/bin/kitty
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -48,7 +52,7 @@ super + m
 
 # Capturas
 super + shift + s
-	flameshot gui 
+	flameshot gui && paplay /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
 Print
 	flameshot screen
 
@@ -95,10 +99,10 @@ super + shift + Down
 #
 
 super + KP_Add
-	wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ 
+	wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && paplay /usr/share/mint-artwork/sounds/volume.oga
 
 super + KP_Subtract
-	wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- 
+	wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && paplay /usr/share/mint-artwork/sounds/volume.oga
 
 #
 # focus/swap
@@ -109,7 +113,8 @@ super + l
 	i3lock-fancy
 
 super + shift + l
-	systemctl suspend && i3lock-fancy
+#	i3lock-fancy & sleep 1 && systemctl suspend
+	systemctl suspend
 
 # focus the node in the given direction
 #super + {_,shift + }{h,j,k,l}
@@ -139,7 +144,7 @@ super + shift + l
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+	bspc {desktop -f,node -d} '^{1-9,10}' && paplay /usr/share/mint-artwork/sounds/switch.oga
 
 #
 # preselect
@@ -177,9 +182,6 @@ super + control + {Left,Down,Up,Right}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-
 #rofi
 super + d
 	rofi -show drun
-
-

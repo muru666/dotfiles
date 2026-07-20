@@ -58,6 +58,11 @@ cd dunst
 make WAYLAND=0
 sudo make install WAYLAND=0
 
+# Instala y configura kitty
+
+echo "==> Instalando Kitty"
+
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
 # Fondos de pantalla y fuentes
 
