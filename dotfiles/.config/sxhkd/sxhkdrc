@@ -52,7 +52,7 @@ super + m
 
 # Capturas
 super + shift + s
-	flameshot gui && paplay /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
+	flameshot gui && paplay /etc/share/bspwmSounds/camera-shutter.oga
 Print
 	flameshot screen
 
@@ -99,10 +99,10 @@ super + shift + Down
 #
 
 super + KP_Add
-	wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && paplay /usr/share/mint-artwork/sounds/volume.oga
+	wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && paplay /etc/share/bspwmSounds/volume.oga
 
 super + KP_Subtract
-	wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && paplay /usr/share/mint-artwork/sounds/volume.oga
+	wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && paplay /etc/share/bspwmSounds/volume.oga
 
 #
 # focus/swap
@@ -144,7 +144,7 @@ super + shift + l
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}' && paplay /usr/share/mint-artwork/sounds/switch.oga
+	bspc {desktop -f,node -d} '^{1-9,10}' && paplay /etc/share/bspwmSounds/switch.oga
 
 #
 # preselect

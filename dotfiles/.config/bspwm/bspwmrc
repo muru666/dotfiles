@@ -18,14 +18,15 @@ bspc rule -a celluloid state=floating
 
 bspc desktop '^2' -l monocle
 
-xrandr --output HDMI-A-0 --mode 1920x1080
+# El siguiente es para forzar la resolución a 1920x1080
+# xrandr --output HDMI-A-0 --mode 1920x1080
 
 picom --config ~/.config/picom/picom.conf &
 
 ~/bin/polybar.launch.sh &
 
-feh --bg-fill /home/agus/Pictures/Wallpapers/3135025.jpg &
+feh --bg-fill ~/Pictures/Wallpapers/3135025.jpg &
 
-(sleep 0.25 && paplay /usr/share/mint-artwork/sounds/login.oga)  &
+(sleep 0.25 && paplay /etc/share/bspwmSounds/login.oga)  &
 
 xset s 305 305 & xss-lock --transfer-sleep-lock -- i3lock-fancy &

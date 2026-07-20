@@ -75,5 +75,8 @@ cp -r "$DOTFILES_DIR/assets/fonts/." "$HOME/.local/share/fonts/" 2>/dev/null || 
 
 fc-cache -fv
 
+# Extrae los sonidos
 
+mkdir -p "/etc/share/bspwmSounds/"
 
+cp -r "$DOTFILES_DIR/assets/sounds/." "/etc/share/bspwmSounds/" 2>/dev/null || true
