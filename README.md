@@ -100,6 +100,6 @@ Super + Escape ->
 
  
 ## Detalles adicionales
-Brave siempre se va a abrir en el escritorio 2 maximizado. Cualquier detalle puede ser modificado en aquí:
+Brave siempre se va a abrir en el escritorio 2 maximizado. Cualquier detalle puede ser modificado aquí:
     
     .config/bspwm/bspwmrc
